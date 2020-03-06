@@ -1,0 +1,81 @@
+{
+  "$schema": "http://json-schema.org/schema#",
+  "required": [
+    "items",
+    "itemsFound",
+    "limit",
+    "next",
+    "previous",
+    "start"
+  ],
+  "type": "object",
+  "properties": {
+    "itemsFound": {
+      "type": "integer"
+    },
+    "items": {
+      "items": {
+        "required": [
+          "createdAt",
+          "deleted",
+          "id",
+          "modelType",
+          "name",
+          "owner",
+          "private",
+          "updatedAt",
+          "users"
+        ],
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string"
+          },
+          "deleted": {
+            "type": "boolean"
+          },
+          "modelType": {
+            "type": "string",
+            "enum": [
+              "ThreadModel"
+            ]
+          },
+          "private": {
+            "type": "boolean"
+          },
+          "updatedAt": {
+            "type": "integer"
+          },
+          "owner": {
+            "type": "string"
+          },
+          "id": {
+            "type": "string"
+          },
+          "createdAt": {
+            "type": "integer"
+          },
+          "users": {
+            "items": {
+              "type": "string"
+            },
+            "type": "array"
+          }
+        }
+      },
+      "type": "array"
+    },
+    "next": {
+      "type": "string"
+    },
+    "start": {
+      "type": "integer"
+    },
+    "limit": {
+      "type": "integer"
+    },
+    "previous": {
+      "type": "string"
+    }
+  }
+}

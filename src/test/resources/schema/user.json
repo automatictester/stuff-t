@@ -1,0 +1,39 @@
+{
+  "$schema": "http://json-schema.org/schema#",
+  "required": [
+    "createdAt",
+    "updatedAt",
+    "id",
+    "modelType",
+    "username",
+    "firstname",
+    "lastname"
+  ],
+  "type": "object",
+  "properties": {
+    "username": {
+      "type": "string"
+    },
+    "firstname": {
+      "type": "string"
+    },
+    "lastname": {
+      "type": "string"
+    },
+    "modelType": {
+      "type": "string",
+      "enum": [
+        "UserModel"
+      ]
+    },
+    "updatedAt": {
+      "type": "integer"
+    },
+    "id": {
+      "type": "string"
+    },
+    "createdAt": {
+      "type": "integer"
+    }
+  }
+}

@@ -1,0 +1,43 @@
+{
+  "$schema": "http://json-schema.org/schema#",
+  "required": [
+    "createdAt",
+    "updatedAt",
+    "id",
+    "modelType",
+    "user",
+    "thread",
+    "message",
+    "deleted"
+  ],
+  "type": "object",
+  "properties": {
+    "thread": {
+      "type": "string"
+    },
+    "deleted": {
+      "type": "boolean"
+    },
+    "modelType": {
+      "type": "string",
+      "enum": [
+        "ThreadMessageModel"
+      ]
+    },
+    "user": {
+      "type": "string"
+    },
+    "updatedAt": {
+      "type": "integer"
+    },
+    "message": {
+      "type": "string"
+    },
+    "id": {
+      "type": "string"
+    },
+    "createdAt": {
+      "type": "integer"
+    }
+  }
+}

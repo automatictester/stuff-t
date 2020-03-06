@@ -1,0 +1,50 @@
+{
+  "$schema": "http://json-schema.org/schema#",
+  "required": [
+    "createdAt",
+    "updatedAt",
+    "id",
+    "modelType",
+    "name",
+    "owner",
+    "users",
+    "private",
+    "deleted"
+  ],
+  "type": "object",
+  "properties": {
+    "name": {
+      "type": "string"
+    },
+    "deleted": {
+      "type": "boolean"
+    },
+    "modelType": {
+      "type": "string",
+      "enum": [
+        "ThreadModel"
+      ]
+    },
+    "private": {
+      "type": "boolean"
+    },
+    "updatedAt": {
+      "type": "integer"
+    },
+    "owner": {
+      "type": "string"
+    },
+    "id": {
+      "type": "string"
+    },
+    "createdAt": {
+      "type": "integer"
+    },
+    "users": {
+      "items": {
+        "type": "string"
+      },
+      "type": "array"
+    }
+  }
+}

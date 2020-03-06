@@ -1,0 +1,74 @@
+{
+  "$schema": "http://json-schema.org/schema#",
+  "required": [
+    "items",
+    "itemsFound",
+    "limit",
+    "next",
+    "previous",
+    "start"
+  ],
+  "type": "object",
+  "properties": {
+    "itemsFound": {
+      "type": "integer"
+    },
+    "items": {
+      "items": {
+        "required": [
+          "createdAt",
+          "deleted",
+          "id",
+          "message",
+          "modelType",
+          "thread",
+          "updatedAt",
+          "user"
+        ],
+        "type": "object",
+        "properties": {
+          "thread": {
+            "type": "string"
+          },
+          "deleted": {
+            "type": "boolean"
+          },
+          "modelType": {
+            "type": "string",
+            "enum": [
+              "ThreadMessageModel"
+            ]
+          },
+          "user": {
+            "type": "string"
+          },
+          "updatedAt": {
+            "type": "integer"
+          },
+          "message": {
+            "type": "string"
+          },
+          "id": {
+            "type": "string"
+          },
+          "createdAt": {
+            "type": "integer"
+          }
+        }
+      },
+      "type": "array"
+    },
+    "next": {
+      "type": "string"
+    },
+    "start": {
+      "type": "integer"
+    },
+    "limit": {
+      "type": "integer"
+    },
+    "previous": {
+      "type": "string"
+    }
+  }
+}
